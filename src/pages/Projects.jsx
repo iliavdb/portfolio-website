@@ -1,27 +1,43 @@
+import data from "../data.js";
+import { useState } from "react";
+import Project from "../components/Project";
+import Modal from "../components/Modal.jsx";
+
 const Projects = () => {
+  const [projects] = useState(data);
+  const [activeProject, setActiveProject] = useState(null); 
+
   return (
     <section className="projects-container">
-      <h1>Projecten</h1>
+      <h1 className="projects-title">Projecten</h1>
 
-      <div className="projects-grid">
-        <div className="project-card">
-          <img src="/images/3.png" alt="Escape Room Project" />
-          <h3>Escape Room</h3>
-          <button>Bekijk Details</button>
-        </div>
-
-        <div className="project-card">
-          <img src="/images/1.png" alt="Portfolio" />
-          <h3>Portfolio Website</h3>
-          <button>Bekijk Details</button>
-        </div>
-
-        <div className="project-card">
-          <img src="/images/3.png" alt="Car Detail" />
-          <h3>Car Detail Masters</h3>
-          <button>Bekijk Details</button>
+      {/* Scrollable wrapper */}
+      <div className="projects-grid-wrapper">
+        <div className="projects-grid">
+          {projects.map((project, index) => (
+            <Project
+              key={index}
+              title={project.title}
+              image={project.image}
+              button={project.button}
+              onOpen={() => setActiveProject(project)}
+            />
+          ))}
         </div>
       </div>
+
+      {/* Dynamische modal */}
+      {activeProject && (
+        <Modal isOpen={true} onClose={() => setActiveProject(null)}>
+          <h2>{activeProject.title}</h2>
+          <img
+            src={activeProject.image}
+            alt={activeProject.title}
+            style={{ width: "100%", marginBottom: "1rem" }}
+          />
+          <p>{activeProject.description}</p>
+        </Modal>
+      )}
     </section>
   );
 };

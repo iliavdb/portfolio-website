@@ -34,38 +34,38 @@ body {
   text-decoration: underline;
 }
 
-
+/* HOME PAGINA */
 .home-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   min-height: 90vh;
   width: 100vw;
 }
-.info{
-    width: 50%;
-}
-.info-about{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    height: 90%;
 
-}
-.about-section{
-    display: flex;
- 
-    align-items: center;
-    text-align: center;
-    min-height: 90vh;
-     width: 100vw;
-}
-.image{
-    
-    width: 50%;
+.info {
+  width: 50%;
 }
 
+.info-about {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+}
+
+.about-section {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  min-height: 90vh;
+  width: 100vw;
+}
+
+.image {
+  width: 50%;
+}
 
 .home-container img {
   border-radius: 10px;
@@ -73,9 +73,9 @@ body {
 }
 
 /* ABOUT PAGINA */
-.image-about{
-    width: 50%;
-    height: 90%;
+.image-about {
+  width: 50%;
+  height: 90%;
 }
 
 .about-text {
@@ -109,6 +109,29 @@ body {
   text-align: center;
 }
 
+/* Scrollable wrapper voor projecten */
+.projects-grid-wrapper {
+  max-height: 600px; /* hoogte van de grid */
+  overflow-y: auto;  /* verticale scroll */
+  overflow-x: hidden; /* geen horizontale scroll */
+  padding-right: 10px;
+}
+
+/* Custom scrollbar voor grid */
+.projects-grid-wrapper::-webkit-scrollbar {
+  width: 8px;
+}
+
+.projects-grid-wrapper::-webkit-scrollbar-track {
+  background: #111;
+  border-radius: 4px;
+}
+
+.projects-grid-wrapper::-webkit-scrollbar-thumb {
+  background-color: #6da6ff;
+  border-radius: 4px;
+}
+
 .projects-grid {
   display: flex;
   justify-content: center;
@@ -117,9 +140,8 @@ body {
 }
 
 .project-card {
-  background-color: gray;
+  background-color: #6da6ff;
   width: 400px;
-  
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(255,255,255,0.1);
   overflow: hidden;
@@ -131,12 +153,12 @@ body {
   object-fit: cover;
 }
 
-.project-card h3 {
+.project-card h2 {
   margin: 15px 0 10px;
 }
 
 .project-card button {
-  background-color: #6da6ff;
+  background-color: black;
   border: none;
   color: white;
   padding: 10px 15px;
@@ -147,6 +169,42 @@ body {
 
 .project-card button:hover {
   background-color: #4c8aff;
+}
+
+/* MODAL */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* belangrijk voor scroll */
+  padding-top: 5vh; /* beetje ruimte boven */
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  color: black;
+  padding: 8rem;
+  border-radius: 10px;
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: transparent;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
 /* PROJECT DETAIL PAGINA */
