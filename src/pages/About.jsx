@@ -4,8 +4,9 @@ const About = () => {
       <section className="info-about">
         <h1>Over Mij</h1>
         <p>
-          Hallo! Ik ben Ilia, een enthousiaste software developer in opleiding. 
-          Ik werk graag aan creatieve en functionele webprojecten met React, Node.js en Python.
+          Ik volg momenteel de mbo-opleiding aan het Techniek College Rotterdam, locatie Schiedam, waar ik inmiddels in mijn tweede jaar zit. <br /> Ik heb nog één jaar te gaan voordat ik mijn diploma behaal. <br /> Na het afronden van deze opleiding wil ik graag doorstromen naar het hbo om mijn studie op een hoger niveau voort te zetten en mijn kennis verder te verdiepen.
+
+
         </p>
    
         <section className="skills">
