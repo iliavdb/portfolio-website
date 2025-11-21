@@ -361,3 +361,25 @@ body {
   margin: 0 10px;
   cursor: pointer;
 }
+.button10{
+  background-color: #6da6ff;
+  color: #ffffff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+.button10:hover{
+  background-color: #5b96f0;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+  transform: translateY(-2px);
+}
+.button10:active{
+    background-color: #4d86db;
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.14);
+}

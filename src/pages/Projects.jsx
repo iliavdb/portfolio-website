@@ -36,6 +36,7 @@ const Projects = () => {
             style={{ width: "100%", marginBottom: "1rem" }}
           />
           <p>{activeProject.description}</p>
+          <a className="button10" href={activeProject.github} target="_blank">Klik hier voor de code van deze pagina.</a>
         </Modal>
       )}
     </section>

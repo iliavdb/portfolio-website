@@ -2,7 +2,7 @@ const Contact = () => {
   return (
     <section className="contact-section">
       <div className="contact-map">
-        <img src="/images/Screenshot 2025-11-12 104838.png" alt="Kaart van Rotterdam" />
+        <img src="./images/google-maps.png" alt="Kaart van Rotterdam" />
       </div>
 
       <form className="contact-form">

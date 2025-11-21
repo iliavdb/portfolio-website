@@ -21,7 +21,7 @@ const About = () => {
    </section>
    <section className="image-about">
 
-      <img className="image-about" src="/images/zakelijke pica portfolio.png" alt="Ilia" />
+      <img className="image-about" src="./images/zakelijke-pica-portfolio.png" alt="Ilia" />
       </section>
     </section>
   );
