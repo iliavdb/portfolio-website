@@ -1,6 +1,6 @@
 import data from "../data.js";
 import { useState } from "react";
-import Project from "../components/Project";
+import Project from "../components/Project.jsx";
 import Modal from "../components/Modal.jsx";
 
 const Projects = () => {
@@ -10,8 +10,6 @@ const Projects = () => {
   return (
     <section className="projects-container">
       <h1 className="projects-title">Projecten</h1>
-
-      {/* Scrollable wrapper */}
       <div className="projects-grid-wrapper">
         <div className="projects-grid">
           {projects.map((project, index) => (
@@ -26,7 +24,7 @@ const Projects = () => {
         </div>
       </div>
 
-      {/* Dynamische modal */}
+      
       {activeProject && (
         <Modal isOpen={true} onClose={() => setActiveProject(null)}>
           <h2>{activeProject.title}</h2>
